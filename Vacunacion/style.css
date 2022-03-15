@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito+Sans:wght@400;900&display=swap');
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    color: #6d7b93;
+    background-color: white;
+}
+
+section {
+    width: 100%;
+    display: inline-flex;
+}
+
+nav {
+    background-color: 'transparent';
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin: 1em 7em;
+}
+li.nav-item.active {
+    width: 10em;
+    text-align: center;
+}
+a.navbar-brand{
+    font-family: 'Nunito Sans';
+    font-weight: 800;
+    font-size: 1.5em;
+}
+a.nav-link {
+    width: 9em;
+    text-align: center;
+    font-weight: 600;
+}
+/* Clases */
+.text-blue{
+    color: #1f3e72;
+}
+.text-big{
+    font-size: 36px!important;
+}
+.text-normal{
+    font-size: 22px;
+}
+.text-bold{
+    font-weight: bold!important;
+}
+.title {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    font-size: 4.5em;
+    margin-block-start: 2em;
+    margin-left: 2em;
+}
+.subtitle {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    font-size: 3em;
+    margin-block-start: 2em;
+    margin-left: 4em;
+}
+.border-solid{
+    border: 1px solid #e7ebfc;
+    border-radius: 15px;
+    margin: 10px;
+}
+.floating{
+    position: absolute;
+    left: 15em;
+    background: white;
+    box-shadow: 0px 5px 15px #888888;
+    top: -9em;
+}
+.answ{
+    font-weight: bold;
+    padding-left: 38px;
+}
+.icon-yellow
+{
+    color: #ffd012;
+    margin: 3px 5px;
+}
+.icon-blue
+{
+    color: #3555d3;
+    margin: 3px 5px;
+}
+
+.ml-9{
+    margin-left: 9em;
+}
+
+.mr-5{
+    margin-right: 5em;
+}
+.px-7{
+    padding-left: 7em;
+    padding-right: 7em;
+}
+.px-13{
+    padding-left: 13em;
+    padding-right: 13em;
+}
