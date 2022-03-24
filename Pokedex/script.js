@@ -4,7 +4,7 @@ var colBar = '<div class="col-2 mb-2">[colName]</div>';
 var colCel = '<div class="col-4">[colName]</div><div class="col-8">[colDesc]</div>';
 
 const fetchPokemon=()=>{
-    let pokemon = document.getElementById('txtPokemon') ? document.getElementById('txtPokemon').value : '1';
+    let pokemon = document.getElementById('txtPokemon') ? document.getElementById('txtPokemon').value.toLowerCase() : '1';
 
     let url='https://pokeapi.co/api/v2/pokemon/' + pokemon;
     fetch(url).then((res)=>{
