@@ -51,10 +51,12 @@ const fetchPokemon=(pokemon)=>{
 fetchPokemon("1");
 
 function anterior(){
-    fetchPokemon(idPokemon-1);
+    let searchPoke = idPokemon-1 == 0 ? 898 : idPokemon-1;
+    fetchPokemon(searchPoke);
 }
 function siguiente(){
-    fetchPokemon(idPokemon+1);
+    let searchPoke = idPokemon+1 == 899 ? 1 : idPokemon+1;
+    fetchPokemon(searchPoke);
 }
 
 function zfill(number, width) {

@@ -1,6 +1,6 @@
 body{
     padding: 2em;
-    background-color: #dc0a2d;
+    background-color: #dc0a2d!important;
 }
 div[id=name] {
     width: 100%;
