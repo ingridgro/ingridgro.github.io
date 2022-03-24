@@ -1,10 +1,14 @@
 body{
     padding: 2em;
+    background-color: #dc0a2d;
 }
 div[id=name] {
     width: 100%;
     font-size: 22px;
     font-weight: bold;
+}
+img{
+    background-color: #bafbff!important;
 }
 label{
     

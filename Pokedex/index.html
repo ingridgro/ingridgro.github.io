@@ -8,46 +8,46 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="script.js"></script>
-<link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="h-100">
-    <h1>POKÉDEX</h1>
+    <h1 class="text-center text-light">POKÉDEX</h1>
     <form class="form-inline" onsubmit="fetchPokemon();return false">
         <div class="form-group mx-sm-3 mb-2">
-          <input type="text" class="form-control" id="txtPokemon" placeholder="Nombre o número">
+            <input type="text" class="form-control" id="txtPokemon" placeholder="Nombre o número">
         </div>
-        <button type="submit" class="btn btn-primary mb-2" >Buscar</button>
-      </form>
+        <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+    </form>
     <div class="row py-5">
-        <div class="col-12 col-lg-5 d-flex justify-content-center"><img src="" alt="pokemon" id="imagen" class="img-thumbnail"/></div>
+        <div class="col-6"><button class="btn btn-link" onclick="anterior()">Anterior</button></div>
+        <div class="col-6 text-right"><button class="btn btn-link" onclick="siguiente()">Siguiente</button></div>
+        <div class="col-12 col-lg-5 d-flex justify-content-center"><img src="" alt="pokemon" id="imagen" class="img-thumbnail" /></div>
         <div class="col-12 col-lg-7">
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header">
+                        <div class="bg-dark card-header text-light">
                             <div id="name"></div>
                         </div>
                         <div class="card-body">
                             <div class="d-flex">
-                                <label for="tipo">Tipo:&nbsp;</label> <div id="tipo"></div>    
+                                <label for="tipo">Tipo:&nbsp;</label> <div id="tipo"></div>
                             </div>
                             <div>
-                                <label for="stats">Estadisticas:&nbsp;</label> 
-                                <div id="stats"class="d-none d-md-block"></div>
+                                <label for="stats">Estadisticas:&nbsp;</label>
+                                <div id="stats" class="d-none d-md-block"></div>
                                 <div id="stats2" class="d-block d-md-none"></div>
-                                
                             </div>
                             <div>
                                 <label for="movs">Movimientos:&nbsp;</label>
-                                <ul id="movs"></div>   
+                                <ul id="movs"></ul>
                             </div>
                         </div>
-                      </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
-    
 </body>
 </html>

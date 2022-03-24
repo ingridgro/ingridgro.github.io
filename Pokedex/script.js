@@ -3,13 +3,16 @@ var rowBar = '<div class="row text-center">[rowBar]</div>';
 var colBar = '<div class="col-2 mb-2">[colName]</div>';
 var colCel = '<div class="col-4">[colName]</div><div class="col-8">[colDesc]</div>';
 
-const fetchPokemon=()=>{
-    let pokemon = document.getElementById('txtPokemon') ? document.getElementById('txtPokemon').value.toLowerCase() : '1';
+var idPokemon = 1;
+
+const fetchPokemon=(pokemon)=>{
+     pokemon = pokemon ? pokemon : document.getElementById('txtPokemon');
 
     let url='https://pokeapi.co/api/v2/pokemon/' + pokemon;
     fetch(url).then((res)=>{
         return res.json();
     }).then((data)=>{
+        idPokemon = data.id;
         document.getElementById('name').innerHTML  ="#" + zfill(data.id, 3) + " "+ data.name;
         document.getElementById("imagen").src=data.sprites.other.home.front_default;
         document.getElementById('tipo').innerHTML  = data.types.map(function(item) {
@@ -45,7 +48,14 @@ const fetchPokemon=()=>{
         console.log(data);
     })
 }
-fetchPokemon();
+fetchPokemon("1");
+
+function anterior(){
+    fetchPokemon(idPokemon-1);
+}
+function siguiente(){
+    fetchPokemon(idPokemon+1);
+}
 
 function zfill(number, width) {
     var numberOutput = Math.abs(number); /* Valor absoluto del número */
