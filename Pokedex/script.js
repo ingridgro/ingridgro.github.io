@@ -6,7 +6,7 @@ var colCel = '<div class="col-4">[colName]</div><div class="col-8">[colDesc]</di
 var idPokemon = 1;
 
 const fetchPokemon=(pokemon)=>{
-     pokemon = pokemon ? pokemon : document.getElementById('txtPokemon');
+     pokemon = pokemon ? pokemon : document.getElementById('txtPokemon').value;
 
     let url='https://pokeapi.co/api/v2/pokemon/' + pokemon;
     fetch(url).then((res)=>{
